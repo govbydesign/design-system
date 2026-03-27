@@ -1,0 +1,7 @@
+:root {
+  --radius-0: 0;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-round: 1e5px; /* Perfect circle or pill shape. */
+}
