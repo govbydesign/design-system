@@ -1,27 +1,32 @@
 {
   "name": "designsystem",
   "version": "1.0.0",
-  "description": "",
+  "description": "A design system for consistent UI components and styles.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Design system",
+    "CSS",
+    "UI components",
+    "front-end"
+  ],
+  "author": "Mario Hernandez",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "storybook": "^10.3.3",
-    "@storybook/html-vite": "^10.3.3",
     "@chromatic-com/storybook": "^5.1.1",
-    "@storybook/addon-vitest": "^10.3.3",
     "@storybook/addon-a11y": "^10.3.3",
     "@storybook/addon-docs": "^10.3.3",
-    "vitest": "^4.1.2",
-    "playwright": "^1.58.2",
+    "@storybook/addon-vitest": "^10.3.3",
+    "@storybook/html-vite": "^10.3.3",
     "@vitest/browser-playwright": "^4.1.2",
-    "@vitest/coverage-v8": "^4.1.2"
+    "@vitest/coverage-v8": "^4.1.2",
+    "playwright": "^1.58.2",
+    "storybook": "^10.3.3",
+    "vitest": "^4.1.2"
   }
 }

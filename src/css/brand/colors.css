@@ -1,8 +1,27 @@
 :root {
+  /* Primitive colors. */
   --color-primary: #0070f3;
   --color-secondary: #1c1c1e;
   --color-background: #ffffff;
   --color-text: #333333;
   --color-border: #eaeaea;
   --color-muted: #888888;
+
+  /* Links. */
+  --theme-link-color: var(--color-primary);
+  --theme-link-color-hover: #005bb5;
+
+  /* Text. */
+  --theme-body-text-color: var(--color-text);
+  --theme-heading-text-color: var(--color-secondary);
+
+  /* Buttons.*/
+  --theme-button-primary-bg: var(--color-primary);
+  --theme-button-primary-text: #ffffff;
+  --theme-button-primary-bg-hover: #005bb5;
+  --theme-button-primary-border: var(--color-border);
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text: var(--color-secondary);
+  --theme-button-secondary-bg-hover: rgba(0, 0, 0, 0.05);
+  --theme-button-secondary-border: var(--color-border);
 }

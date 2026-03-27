@@ -1,4 +1,8 @@
 /** @type { import('@storybook/html-vite').Preview } */
+
+// Theme Styles
+import '../src/css/styles.css';
+
 const preview = {
   parameters: {
     controls: {
