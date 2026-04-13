@@ -1,9 +1,9 @@
 :root {
-  --zi-50: 50;
-  --zi-40: 40;
-  --zi-30: 30;
-  --zi-20: 20;
-  --zi-10: 10;
-  --zi-0: 0;
-  --zi--10: -10;
+  --zi-base: 0;
+  --zi-raised: 10;
+  --zi-sticky: 100;
+  --zi-dropdown: 400;
+  --zi-overlay: 800;
+  --zi-modal: 1000;
+  --zi-toast: 1100;
 }

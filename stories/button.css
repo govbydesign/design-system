@@ -1,30 +1,62 @@
 .storybook-button {
-  display: inline-block;
+  align-items: center;
+  backdrop-filter: blur(18px);
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  color: var(--sys-color-action-primary-text);
   cursor: pointer;
-  border: 0;
-  border-radius: 3em;
-  font-weight: 700;
-  line-height: 1;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  font: var(--text-label);
+  gap: var(--space-3);
+  justify-content: center;
+  letter-spacing: 0.01em;
+  transition:
+    transform var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-base) var(--ease-standard),
+    border-color var(--duration-base) var(--ease-standard),
+    background var(--duration-base) var(--ease-standard);
 }
-.storybook-button--primary {
-  background-color: #555ab9;
-  color: white;
+
+.storybook-button:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-0.1rem);
 }
-.storybook-button--secondary {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  background-color: transparent;
-  color: #333;
+
+.storybook-button:active {
+  transform: translateY(0);
 }
+
+.storybook-button[data-variant='primary'] {
+  background: var(--button-custom-background, var(--sys-color-action-primary-bg));
+  border-color: var(--sys-color-action-primary-border);
+  color: var(--sys-color-action-primary-text);
+}
+
+.storybook-button[data-variant='secondary'] {
+  background: var(--sys-color-action-secondary-bg);
+  border-color: var(--sys-color-action-secondary-border);
+  color: var(--sys-color-action-secondary-text);
+}
+
+.storybook-button[data-variant='ghost'] {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--sys-color-text-brand);
+}
+
 .storybook-button--small {
-  padding: 10px 16px;
-  font-size: 12px;
+  min-height: 3.8rem;
+  padding: 0 var(--space-5);
 }
+
 .storybook-button--medium {
-  padding: 11px 20px;
-  font-size: 14px;
+  min-height: 4.6rem;
+  padding: 0 var(--space-6);
 }
+
 .storybook-button--large {
-  padding: 12px 24px;
-  font-size: 16px;
+  min-height: 5.4rem;
+  padding: 0 var(--space-8);
 }

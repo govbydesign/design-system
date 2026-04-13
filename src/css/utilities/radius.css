@@ -1,7 +1,11 @@
 :root {
-  --radius-0: 0;
-  --radius-2: 2px;
-  --radius-4: 4px;
-  --radius-8: 8px;
-  --radius-round: 1e5px; /* Perfect circle or pill shape. */
+  --radius-none: 0;
+  --radius-2xs: 0.4rem;
+  --radius-xs: 0.8rem;
+  --radius-sm: 1.2rem;
+  --radius-md: 1.6rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.8rem;
+  --radius-2xl: 3.6rem;
+  --radius-full: 999rem;
 }

@@ -1,0 +1,60 @@
+# Build & Distribution
+dist/
+build/
+storybook/
+storybook-static/
+
+# Dependencies
+node_modules/
+yarn.lock
+
+# Drupal
+sites/default/files/
+sites/default/settings*.php
+sites/*/private/
+sites/*/tmp/
+files/
+private/
+tmp/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.editorconfig
+
+# Environment & Config
+.env
+.env.local
+.env.*.local
+
+# OS Files
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary Files
+.cache/
+*.tmp
+*.bak
+
+# Testing
+coverage/
+.nyc_output/
+
+# Storybook
+.storybook/.cache/

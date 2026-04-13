@@ -1,0 +1,177 @@
+.foundations-page {
+  display: grid;
+  gap: var(--space-9);
+  padding: var(--section-padding-y) var(--page-gutter);
+}
+
+.foundations-hero {
+  background:
+    radial-gradient(circle at top right, color-mix(in oklch, var(--brand-accent-500) 26%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in oklch, var(--brand-core-50) 72%, transparent), transparent),
+    var(--sys-color-surface-raised);
+  border: 1px solid var(--sys-color-border-subtle);
+  border-radius: calc(var(--radius-2xl) * 1.1);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  gap: var(--space-7);
+  padding: clamp(2.4rem, 1.2rem + 3vw, 5.6rem);
+}
+
+.foundations-eyebrow {
+  color: var(--sys-color-text-brand);
+  font: var(--text-label);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.foundations-hero h1 {
+  font: var(--text-title-display);
+  margin: 0;
+  max-width: 11ch;
+}
+
+.foundations-hero p {
+  color: var(--sys-color-text-secondary);
+  font: var(--text-body-lg);
+  margin: 0;
+}
+
+.foundations-hero-grid,
+.foundations-token-grid,
+.foundations-theme-grid,
+.foundations-type-grid,
+.foundations-space-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.foundations-hero-grid,
+.foundations-theme-grid {
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+.foundations-token-grid {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.foundations-type-grid {
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+}
+
+.foundations-space-grid {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.foundation-card {
+  background: var(--sys-color-surface-raised);
+  border: 1px solid var(--sys-color-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-6);
+}
+
+.foundation-card h2,
+.foundation-card h3,
+.foundation-card p {
+  margin: 0;
+}
+
+.foundation-card p {
+  color: var(--sys-color-text-secondary);
+}
+
+.foundation-stack {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.foundation-token-value {
+  color: var(--sys-color-text-brand);
+  font: var(--text-code);
+}
+
+.foundation-theme-sample {
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.foundation-theme-chip {
+  align-items: center;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  font: var(--text-label);
+  justify-content: center;
+  min-height: 3.4rem;
+  min-width: 8rem;
+  padding: 0 var(--space-4);
+}
+
+.foundation-type-sample {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.foundation-space-item {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.foundation-space-bar {
+  background: var(--sys-color-action-primary-bg);
+  border-radius: var(--radius-full);
+  height: 1rem;
+}
+
+.palette-story {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.palette-story .family {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.palette-story h2 {
+  font: var(--text-title-h3);
+  margin: 0;
+}
+
+.palette-story .swatches {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.palette-story .swatch {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.palette-story .swatch-color {
+  align-items: end;
+  border: 1px solid color-mix(in oklch, var(--sys-color-border-default) 50%, transparent);
+  border-radius: var(--radius-md);
+  display: flex;
+  min-height: 8.8rem;
+  padding: var(--space-3);
+}
+
+.palette-story .swatch-shade {
+  font: var(--text-label);
+}
+
+.palette-story .swatch-name,
+.palette-story .swatch-hex,
+.palette-story .swatch-value {
+  color: var(--sys-color-text-secondary);
+  font: var(--text-code);
+}
+
+@media (max-width: 720px) {
+  .foundations-page {
+    gap: var(--space-8);
+  }
+}

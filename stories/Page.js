@@ -3,6 +3,7 @@ import './page.css';
 
 export const createPage = () => {
   const article = document.createElement('article');
+  article.className = 'storybook-page-shell';
   let user = null;
   let header = null;
 

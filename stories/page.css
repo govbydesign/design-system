@@ -1,68 +1,76 @@
 .storybook-page {
   margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  max-width: min(100% - (var(--page-gutter) * 2), var(--container-md));
+  padding: var(--section-padding-y) var(--page-gutter);
+}
+
+.storybook-page::before {
+  background:
+    radial-gradient(circle at top left, color-mix(in oklch, var(--brand-core-300) 18%, transparent), transparent 60%),
+    linear-gradient(135deg, color-mix(in oklch, var(--brand-core-50) 65%, transparent), transparent);
+  border: 1px solid var(--sys-color-border-subtle);
+  border-radius: calc(var(--radius-2xl) * 1.2);
+  content: '';
+  inset: var(--space-6);
+  position: absolute;
+  z-index: -1;
+}
+
+.storybook-page-shell {
+  position: relative;
 }
 
 .storybook-page h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+  margin-bottom: var(--space-5);
 }
 
 .storybook-page p {
-  margin: 1em 0;
-}
-
-.storybook-page a {
-  color: inherit;
+  color: var(--sys-color-text-secondary);
+  margin: 0 0 var(--space-5);
 }
 
 .storybook-page ul {
-  margin: 1em 0;
-  padding-left: 30px;
+  color: var(--sys-color-text-secondary);
+  display: grid;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-6);
+  padding-left: var(--space-7);
 }
 
-.storybook-page li {
-  margin-bottom: 8px;
+.storybook-page li::marker {
+  color: var(--sys-color-text-brand);
 }
 
 .storybook-page .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
+  background: color-mix(in oklch, var(--sys-color-success) 16%, white 84%);
+  border-radius: var(--radius-full);
+  color: var(--sys-color-success);
+  display: inline-flex;
+  font: var(--text-label);
+  margin-right: var(--space-4);
+  padding: var(--space-3) var(--space-5);
 }
 
 .storybook-page .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
+  align-items: center;
+  background: var(--sys-color-surface-raised);
+  border: 1px solid var(--sys-color-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  color: var(--sys-color-text-secondary);
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+  padding: var(--space-4) var(--space-5);
 }
 
 .storybook-page .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
+  display: block;
+  height: 1.4rem;
+  width: 1.4rem;
 }
 
 .storybook-page .tip-wrapper svg path {
-  fill: #1ea7fd;
+  fill: var(--sys-color-text-brand);
 }

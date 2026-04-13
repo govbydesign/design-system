@@ -1,0 +1,12 @@
+:where(button, input, select, textarea) {
+  color: inherit;
+  font: inherit;
+}
+
+:where(input, select, textarea) {
+  background: var(--sys-color-surface-raised);
+  border: 1px solid var(--sys-color-border-default);
+  border-radius: var(--radius-md);
+  min-height: 4.4rem;
+  padding: 0 var(--space-5);
+}

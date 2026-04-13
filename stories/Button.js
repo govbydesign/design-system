@@ -1,7 +1,7 @@
 import './button.css';
 
 export const createButton = ({
-  primary = false,
+  variant = 'primary',
   size = 'medium',
   backgroundColor,
   label,
@@ -11,11 +11,14 @@ export const createButton = ({
   btn.type = 'button';
   btn.innerText = label;
   btn.addEventListener('click', onClick);
+  btn.dataset.variant = variant;
 
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  btn.className = ['storybook-button', `storybook-button--${size}`, mode].join(' ');
+  btn.className = ['storybook-button', `storybook-button--${size}`].join(' ');
 
-  btn.style.backgroundColor = backgroundColor;
+  if (backgroundColor) {
+    btn.style.setProperty('--button-custom-background', backgroundColor);
+    btn.dataset.customBackground = 'true';
+  }
 
   return btn;
 };

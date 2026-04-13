@@ -1,6 +1,13 @@
-@import './utilities/radius';
-@import './utilities/space';
-@import './utilities/z-index';
+@import './utilities/space.css';
+@import './utilities/radius.css';
+@import './utilities/z-index.css';
+@import './utilities/layout.css';
+@import './utilities/shadow.css';
+@import './utilities/motion.css';
 
-@import '../css/base/reset.css';
-@import '../css/base/base.css';
+@import './brand/colors.css';
+@import './brand/typography.css';
+
+@import './base/reset.css';
+@import './base/base.css';
+@import './base/forms.css';

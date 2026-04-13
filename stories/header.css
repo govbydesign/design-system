@@ -1,32 +1,41 @@
 .storybook-header {
+  align-items: center;
+  backdrop-filter: blur(24px);
+  background: color-mix(in oklch, var(--sys-color-surface-raised) 86%, transparent);
+  border: 1px solid var(--sys-color-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   display: flex;
   justify-content: space-between;
+  margin: var(--space-6);
+  padding: var(--space-5) var(--space-6);
+}
+
+.storybook-header > div:first-child {
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--sys-color-surface-raised);
+  display: flex;
+  gap: var(--space-4);
 }
 
 .storybook-header svg {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  filter: drop-shadow(0 1rem 2rem color-mix(in oklch, var(--brand-core-500) 22%, transparent));
 }
 
 .storybook-header h1 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 6px 0 6px 10px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1;
+  color: var(--sys-color-text-primary);
+  font: var(--text-title-h3);
+  margin: 0;
 }
 
-.storybook-header button + button {
-  margin-left: 10px;
+.storybook-header > div:last-child {
+  align-items: center;
+  display: flex;
+  gap: var(--space-3);
 }
 
 .storybook-header .welcome {
-  margin-right: 10px;
-  color: #333;
-  font-size: 14px;
+  color: var(--sys-color-text-secondary);
+  font: var(--text-body-sm);
 }

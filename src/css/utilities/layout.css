@@ -1,0 +1,11 @@
+:root {
+  --grid-columns: 12;
+  --grid-gap: var(--space-6);
+  --container-xs: 40rem;
+  --container-sm: 64rem;
+  --container-md: 82rem;
+  --container-lg: 112rem;
+  --container-xl: 128rem;
+  --page-gutter: clamp(1.6rem, 1rem + 2vw, 3.2rem);
+  --section-padding-y: clamp(3.2rem, 1.2rem + 4vw, 8rem);
+}
