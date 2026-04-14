@@ -220,8 +220,8 @@ const renderFullPalette = () => {
 
   const intro = createElementFromHTML(`
     <section class="foundation-card foundation-stack">
-      <h2>Reference Palette Library</h2>
-      <p>These are the reference palette families available to map into theme ramps. This layer stays raw and unopinionated so themes can shift without renaming semantic tokens.</p>
+      <h2>Colors Palette Library</h2>
+      <p>These are the colors palette families available to map into theme ramps. This layer stays raw and unopinionated so themes can shift without renaming semantic tokens.</p>
     </section>
   `);
   root.appendChild(intro);
@@ -282,6 +282,6 @@ export const SpacingAndLayout = {
   render: renderSpacing,
 };
 
-export const ReferencePalettes = {
+export const ColorPalettes = {
   render: renderFullPalette,
 };
