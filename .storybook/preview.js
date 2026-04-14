@@ -1,38 +1,38 @@
 /** @type { import('@storybook/html-vite').Preview } */
 
-import '../src/css/styles.css';
+import '../src/styles/index.css';
 
 const applyGlobals = (globals) => {
   document.documentElement.dataset.theme = globals.theme;
-  document.documentElement.dataset.colorMode = globals.colorMode;
+  document.documentElement.dataset.brand = globals.brand;
   document.body.dataset.theme = globals.theme;
-  document.body.dataset.colorMode = globals.colorMode;
+  document.body.dataset.brand = globals.brand;
 };
 
 const preview = {
   globalTypes: {
     theme: {
       name: 'Theme',
-      description: 'Platform brand theme',
-      defaultValue: 'atlas',
-      toolbar: {
-        icon: 'paintbrush',
-        items: [
-          { value: 'atlas', title: 'Atlas' },
-          { value: 'evergreen', title: 'Evergreen' },
-          { value: 'pulse', title: 'Pulse' },
-        ],
-      },
-    },
-    colorMode: {
-      name: 'Mode',
-      description: 'Light and dark color modes',
+      description: 'Color mode',
       defaultValue: 'light',
       toolbar: {
         icon: 'mirror',
         items: [
           { value: 'light', title: 'Light' },
           { value: 'dark', title: 'Dark' },
+        ],
+      },
+    },
+    brand: {
+      name: 'Brand',
+      description: 'Brand flavor',
+      defaultValue: 'brand-default',
+      toolbar: {
+        icon: 'paintbrush',
+        items: [
+          { value: 'brand-default', title: 'Default' },
+          { value: 'brand-a', title: 'Brand A' },
+          { value: 'brand-b', title: 'Brand B' },
         ],
       },
     },

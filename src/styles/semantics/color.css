@@ -1,0 +1,19 @@
+:root {
+  --color-brand-strong: var(--color-indigo-600);
+  --color-brand-accent: var(--color-cyan-500);
+  --color-brand-muted: color-mix(in oklch, var(--color-indigo-50) 78%, white 22%);
+
+  --color-action-primary-bg: linear-gradient(135deg, var(--color-brand-strong), var(--color-brand-accent));
+  --color-action-primary-border: color-mix(in oklch, var(--color-brand-strong) 74%, black 26%);
+  --color-action-primary-text: var(--color-white);
+  --color-action-secondary-bg: color-mix(in oklch, var(--color-indigo-50) 64%, white 36%);
+  --color-action-secondary-border: color-mix(in oklch, var(--color-indigo-200) 50%, var(--color-slate-200) 50%);
+  --color-action-secondary-text: var(--color-slate-900);
+
+  --color-link: var(--color-brand-strong);
+  --color-link-hover: color-mix(in oklch, var(--color-brand-strong) 78%, black 22%);
+  --color-info: var(--color-blue-600);
+  --color-success: var(--color-emerald-600);
+  --color-warning: var(--color-amber-600);
+  --color-danger: var(--color-rose-600);
+}

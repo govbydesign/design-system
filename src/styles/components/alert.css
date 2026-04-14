@@ -1,0 +1,25 @@
+.alert {
+  align-items: start;
+  background: var(--alert-bg, var(--color-surface-accent));
+  border: 1px solid var(--alert-border, var(--color-border-subtle));
+  border-radius: var(--radius-lg);
+  color: var(--color-text-primary);
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.alert--success {
+  --alert-bg: color-mix(in oklch, var(--color-success) 14%, white 86%);
+  --alert-border: color-mix(in oklch, var(--color-success) 28%, white 72%);
+}
+
+.alert--warning {
+  --alert-bg: color-mix(in oklch, var(--color-warning) 18%, white 82%);
+  --alert-border: color-mix(in oklch, var(--color-warning) 32%, white 68%);
+}
+
+.alert--danger {
+  --alert-bg: color-mix(in oklch, var(--color-danger) 14%, white 86%);
+  --alert-border: color-mix(in oklch, var(--color-danger) 28%, white 72%);
+}

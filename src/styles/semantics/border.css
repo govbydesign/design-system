@@ -1,0 +1,6 @@
+:root {
+  --color-border-subtle: color-mix(in oklch, var(--color-slate-200) 82%, white 18%);
+  --color-border-default: var(--color-slate-300);
+  --color-border-strong: var(--color-slate-500);
+  --color-border-brand: color-mix(in oklch, var(--color-brand-strong) 55%, white 45%);
+}

@@ -15,8 +15,8 @@ export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }) => {
           fill="currentColor" />
         <path
           d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-          fill="var(--brand-core-600)" />
-        <path d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z" fill="var(--brand-accent-500)" />
+          fill="var(--color-brand-strong)" />
+        <path d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z" fill="var(--color-brand-accent)" />
       </g>
     </svg>
     <h1>Acme</h1>

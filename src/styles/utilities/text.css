@@ -1,0 +1,11 @@
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-muted {
+  color: var(--color-text-muted) !important;
+}
+
+.u-text-brand {
+  color: var(--color-text-brand) !important;
+}

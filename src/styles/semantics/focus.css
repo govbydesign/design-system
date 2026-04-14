@@ -1,0 +1,3 @@
+:root {
+  --color-focus-ring: color-mix(in oklch, var(--color-brand-strong) 68%, white 32%);
+}

@@ -1,0 +1,9 @@
+:root {
+  --z-index-base: 0;
+  --z-index-raised: 10;
+  --z-index-sticky: 100;
+  --z-index-dropdown: 400;
+  --z-index-overlay: 800;
+  --z-index-modal: 1000;
+  --z-index-toast: 1100;
+}

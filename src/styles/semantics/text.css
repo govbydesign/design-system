@@ -1,0 +1,8 @@
+:root {
+  --color-text-primary: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-600);
+  --color-text-muted: var(--color-slate-500);
+  --color-text-inverse: var(--color-white);
+  --color-text-brand: var(--color-brand-strong);
+  --color-text-on-action: var(--color-white);
+}

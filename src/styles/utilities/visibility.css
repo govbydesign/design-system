@@ -1,0 +1,35 @@
+.u-sr-only {
+  block-size: 1px;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.u-sr-only-focusable:not(:focus):not(:active) {
+  block-size: 1px;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.u-sr-only-focusable:focus-visible,
+.u-skip-link:focus-visible {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  clip: auto;
+  color: var(--color-text-primary);
+  inset-block-start: var(--space-4);
+  inset-inline-start: var(--space-4);
+  inline-size: auto;
+  overflow: visible;
+  padding: var(--space-3) var(--space-5);
+  position: fixed;
+  white-space: normal;
+  z-index: var(--z-index-toast);
+}

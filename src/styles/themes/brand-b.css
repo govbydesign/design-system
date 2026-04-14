@@ -1,0 +1,7 @@
+[data-brand='brand-b'] {
+  --brand-name: 'Brand B';
+  --color-brand-strong: var(--color-emerald-600);
+  --color-brand-accent: var(--color-cyan-500);
+  --color-brand-muted: color-mix(in oklch, var(--color-emerald-50) 78%, white 22%);
+  --color-surface-page: color-mix(in oklch, white 92%, var(--color-emerald-50) 8%);
+}

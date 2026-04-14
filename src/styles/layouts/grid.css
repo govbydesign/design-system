@@ -1,0 +1,5 @@
+.l-grid {
+  display: grid;
+  gap: var(--grid-gap, var(--space-6));
+  grid-template-columns: repeat(var(--grid-min-columns, auto-fit), minmax(min(var(--grid-min-item-size, 24rem), 100%), 1fr));
+}

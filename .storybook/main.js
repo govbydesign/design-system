@@ -11,6 +11,9 @@ const config = {
     "@storybook/addon-a11y",
     "@storybook/addon-docs"
   ],
-  "framework": "@storybook/html-vite"
+  "framework": "@storybook/html-vite",
+  core: {
+    builder: '@storybook/builder-vite',
+  },
 };
 export default config;

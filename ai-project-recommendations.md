@@ -59,7 +59,8 @@ web/themes/custom/my_theme/
 ├── images/
 ├── logo.svg
 └── screenshot.png
-How I’d divide responsibilities
+
+## How I’d divide responsibilities
 
 components/: reusable UI, organized by atomic design, using Drupal SDC.
 templates/: Drupal-specific wrappers and overrides for nodes, fields, views, pages, forms.
@@ -82,20 +83,23 @@ That is the best fit for Drupal now because SDC expects components in components
 
 Recommended frontend standards
 
-CSS:
+### CSS
 
 Prefer native CSS first: custom properties, cascade layers, nesting if your browser target allows it, logical properties, container queries.
 Keep design tokens in one place, e.g. tokens.css.
 Use utility classes sparingly for layout primitives only.
 Co-locate component CSS with the component.
 Use PostCSS for autoprefixing and small transforms, not as an excuse for complexity.
-HTML/Twig:
 
-Semantic HTML first.
+### HTML/Twig
+
+Semantic HTML first
+
 ARIA only when native HTML is insufficient.
 Keep components API-driven through props/slots, not ad hoc context leakage.
 Use SDC schema aggressively; I recommend enforce_prop_schemas: true in the theme as a team standard. That’s an inference-based recommendation, but it aligns with Drupal’s guidance that schemas are highly recommended and unlock better validation and overrides. Source: Drupal SDC docs.
-JS:
+
+## JS
 
 ES modules only.
 No jQuery by default.

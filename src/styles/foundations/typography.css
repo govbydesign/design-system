@@ -1,0 +1,82 @@
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 0.08em;
+  text-decoration-color: color-mix(in oklch, currentColor 32%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible {
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 0.12em;
+}
+
+a[aria-current='page'] {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-slight);
+  text-wrap: balance;
+}
+
+h1 {
+  font: var(--text-heading-1);
+}
+
+h2 {
+  font: var(--text-heading-2);
+}
+
+h3 {
+  font: var(--text-heading-3);
+}
+
+p,
+li {
+  max-width: var(--measure-reading);
+}
+
+code,
+pre,
+kbd {
+  font: var(--text-code);
+}
+
+::selection {
+  background: color-mix(in oklch, var(--color-brand-accent) 30%, transparent);
+}
+
+*:focus-visible {
+  outline: 0.3rem solid var(--color-focus-ring);
+  outline-offset: 0.3rem;
+}
+
+:where(button, [role='button'], summary, input, select, textarea):focus-visible {
+  box-shadow:
+    0 0 0 0.2rem var(--color-surface-page),
+    0 0 0 0.5rem color-mix(in oklch, var(--color-focus-ring) 72%, transparent);
+}
+
+@media (prefers-contrast: more) {
+  a {
+    text-decoration-thickness: 0.14em;
+  }
+
+  *:focus-visible {
+    outline-width: 0.4rem;
+  }
+}
+
+@media (forced-colors: active) {
+  *:focus-visible {
+    outline: 2px solid Highlight;
+    box-shadow: none;
+  }
+}

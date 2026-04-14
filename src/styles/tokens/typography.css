@@ -1,0 +1,41 @@
+:root {
+  --font-family-sans: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-family-display: 'Clash Display', 'Sora', 'Avenir Next', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'SFMono-Regular', monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+
+  --font-size-2xs: clamp(1.1rem, 1rem + 0.08vw, 1.2rem);
+  --font-size-xs: clamp(1.2rem, 1.1rem + 0.1vw, 1.3rem);
+  --font-size-sm: clamp(1.35rem, 1.24rem + 0.12vw, 1.45rem);
+  --font-size-md: clamp(1.5rem, 1.38rem + 0.18vw, 1.7rem);
+  --font-size-lg: clamp(1.8rem, 1.62rem + 0.3vw, 2.1rem);
+  --font-size-xl: clamp(2.2rem, 1.92rem + 0.6vw, 2.8rem);
+  --font-size-2xl: clamp(2.8rem, 2.26rem + 1vw, 3.8rem);
+  --font-size-3xl: clamp(3.6rem, 2.72rem + 1.8vw, 5.4rem);
+  --font-size-4xl: clamp(4.4rem, 3.12rem + 2.6vw, 6.8rem);
+
+  --line-height-tight: 1.05;
+  --line-height-snug: 1.18;
+  --line-height-normal: 1.4;
+  --line-height-relaxed: 1.65;
+
+  --letter-spacing-tight: -0.04em;
+  --letter-spacing-slight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+
+  --text-display: var(--font-weight-black) var(--font-size-4xl) / var(--line-height-tight) var(--font-family-display);
+  --text-heading-1: var(--font-weight-bold) var(--font-size-3xl) / var(--line-height-tight) var(--font-family-display);
+  --text-heading-2: var(--font-weight-bold) var(--font-size-2xl) / var(--line-height-snug) var(--font-family-display);
+  --text-heading-3: var(--font-weight-semibold) var(--font-size-xl) / var(--line-height-snug) var(--font-family-display);
+  --text-body-lg: var(--font-weight-regular) var(--font-size-lg) / var(--line-height-relaxed) var(--font-family-sans);
+  --text-body-md: var(--font-weight-regular) var(--font-size-md) / var(--line-height-relaxed) var(--font-family-sans);
+  --text-body-sm: var(--font-weight-regular) var(--font-size-sm) / var(--line-height-normal) var(--font-family-sans);
+  --text-label: var(--font-weight-semibold) var(--font-size-xs) / 1 var(--font-family-sans);
+  --text-code: var(--font-weight-medium) var(--font-size-xs) / 1.5 var(--font-family-mono);
+}

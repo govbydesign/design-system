@@ -1,0 +1,7 @@
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-inline-size: 100%;
+}

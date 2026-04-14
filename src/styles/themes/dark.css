@@ -1,0 +1,28 @@
+[data-theme='dark'] {
+  color-scheme: dark;
+  --theme-name: 'Dark';
+
+  --color-surface-page: color-mix(in oklch, var(--color-zinc-950) 88%, var(--color-brand-strong) 12%);
+  --color-surface-raised: oklch(24% 0.018 265 / 0.72);
+  --color-surface-sunken: color-mix(in oklch, var(--color-zinc-950) 76%, black 24%);
+  --color-surface-brand: color-mix(in oklch, var(--color-brand-strong) 64%, black 36%);
+  --color-surface-brand-muted: color-mix(in oklch, var(--color-brand-strong) 32%, var(--color-zinc-950) 68%);
+  --color-surface-accent: color-mix(in oklch, var(--color-brand-accent) 20%, var(--color-zinc-950) 80%);
+  --color-overlay: oklch(4% 0 0 / 0.72);
+
+  --color-text-primary: oklch(97% 0.006 285);
+  --color-text-secondary: oklch(82% 0.015 276);
+  --color-text-muted: oklch(68% 0.014 276);
+  --color-text-brand: color-mix(in oklch, var(--color-brand-accent) 42%, white 58%);
+
+  --color-border-subtle: oklch(34% 0.015 275 / 0.54);
+  --color-border-default: oklch(44% 0.018 275 / 0.72);
+  --color-border-strong: oklch(58% 0.02 275 / 0.86);
+  --color-border-brand: color-mix(in oklch, var(--color-brand-accent) 38%, var(--color-zinc-700) 62%);
+
+  --color-action-primary-border: color-mix(in oklch, var(--color-brand-accent) 38%, white 62%);
+  --color-action-secondary-bg: color-mix(in oklch, var(--color-brand-strong) 18%, var(--color-zinc-900) 82%);
+  --color-action-secondary-border: color-mix(in oklch, var(--color-brand-accent) 28%, var(--color-zinc-700) 72%);
+  --color-action-secondary-text: var(--color-text-primary);
+  --color-focus-ring: color-mix(in oklch, var(--color-brand-accent) 52%, white 48%);
+}
