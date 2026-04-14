@@ -147,7 +147,7 @@
 
 .palette-story .swatch {
   display: grid;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .palette-story .swatch-color {

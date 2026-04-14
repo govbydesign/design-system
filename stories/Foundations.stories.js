@@ -1,4 +1,5 @@
 import './foundations.css';
+import { formatHex, parse } from 'culori';
 import { paletteFamilies } from './foundationPalette.js';
 
 const semanticTokens = [
@@ -43,6 +44,18 @@ const createElementFromHTML = (html) => {
   const template = document.createElement('template');
   template.innerHTML = html.trim();
   return template.content.firstElementChild;
+};
+
+const normalizeFamilyName = (familyName) =>
+  familyName
+    .toLowerCase()
+    .replace(/\s*\(.*?\)\s*/g, '')
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-');
+
+const colorToHex = (colorValue) => {
+  const parsed = parse(colorValue);
+  return parsed ? formatHex(parsed).toLowerCase() : '';
 };
 
 const renderOverview = () => {
@@ -224,12 +237,16 @@ const renderFullPalette = () => {
     swatches.className = 'swatches';
 
     family.swatches.forEach((swatch) => {
+      const tokenName = `--color-${normalizeFamilyName(family.name)}-${swatch.shade}`;
+      const hexValue = colorToHex(swatch.background);
       swatches.appendChild(
         createElementFromHTML(`
           <div class="swatch">
             <div class="swatch-color" style="background:${swatch.background};">
               <span class="swatch-shade" style="color:${swatch.foreground};">${swatch.shade}</span>
             </div>
+            <div class="swatch-name">${tokenName}</div>
+            <div class="swatch-hex">${hexValue}</div>
             <div class="swatch-value">${swatch.value}</div>
           </div>
         `)
