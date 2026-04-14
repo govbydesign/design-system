@@ -3,16 +3,18 @@ html {
     radial-gradient(circle at top left, color-mix(in oklch, var(--brand-core-200) 24%, transparent), transparent 28%),
     linear-gradient(180deg, color-mix(in oklch, var(--sys-color-surface-canvas) 96%, white 4%), var(--sys-color-surface-canvas));
   font-size: 62.5%;
-  min-height: 100%;
+  min-block-size: 100dvh;
   scroll-behavior: smooth;
 }
 
-body {
+body {what mcp
+
+
   background: transparent;
   color: var(--sys-color-text-primary);
   font: var(--text-body-md);
   margin: 0;
-  min-height: 100vh;
+  min-block-size: 100dvh;
   text-rendering: optimizeLegibility;
   transition:
     background-color 180ms ease,
@@ -51,7 +53,7 @@ h3 {
 
 p,
 li {
-  max-width: 70ch;
+  max-inline-size: 70ch;
 }
 
 code,

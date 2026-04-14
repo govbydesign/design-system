@@ -1,3 +1,5 @@
+/* TODO: Code review comment from copilot:
+The dark theme implementation uses many hardcoded oklch values for semantic tokens. This bypasses the primitive token system defined in src/styles/tokens/color.css. To ensure maintainability and consistency, these should map to the primitive color tokens instead of raw color values. */
 [data-theme='dark'] {
   color-scheme: dark;
   --theme-name: 'Dark';

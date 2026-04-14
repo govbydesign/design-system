@@ -40,7 +40,7 @@ h3 {
 
 p,
 li {
-  max-width: var(--measure-reading);
+  max-inline-size: var(--measure-reading);
 }
 
 code,

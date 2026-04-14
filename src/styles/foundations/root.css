@@ -3,7 +3,7 @@ html {
     radial-gradient(circle at top left, color-mix(in oklch, var(--color-brand-accent) 16%, transparent), transparent 28%),
     linear-gradient(180deg, color-mix(in oklch, var(--color-surface-page) 96%, white 4%), var(--color-surface-page));
   font-size: 62.5%;
-  min-height: 100%;
+  min-block-size: 100dvh;
   scroll-behavior: smooth;
 }
 

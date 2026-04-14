@@ -9,6 +9,11 @@
   padding: var(--space-5);
 }
 
+/* TODO: Code review comment from copilot:
+Mixing colors with hardcoded white for alert backgrounds and borders will
+not work correctly in dark mode, as it will produce high-contrast light
+patches in a dark UI. Consider mixing with a theme-aware variable
+like var(--color-surface-page). */
 .alert--success {
   --alert-bg: color-mix(in oklch, var(--color-success) 14%, white 86%);
   --alert-border: color-mix(in oklch, var(--color-success) 28%, white 72%);

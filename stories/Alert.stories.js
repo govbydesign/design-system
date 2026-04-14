@@ -1,3 +1,8 @@
+// TODO: Code review comments by copilot:
+// Using innerHTML with variables is a security risk as it can lead to
+// Cross-Site Scripting (XSS) vulnerabilities. Even in Storybook, it is
+// better to use safer alternatives like textContent or createElement
+// to demonstrate secure coding practices.
 const createAlert = (variant, title, message) => {
   const alert = document.createElement('aside');
   alert.className = `alert alert--${variant}`;
