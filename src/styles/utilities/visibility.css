@@ -31,5 +31,5 @@
   padding: var(--space-3) var(--space-5);
   position: fixed;
   white-space: normal;
-  z-index: var(--z-index-toast);
+  z-index: var(--zi-highest);
 }
