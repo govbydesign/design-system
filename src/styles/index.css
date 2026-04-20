@@ -2,6 +2,7 @@
 
 @import './tokens/primitives.css' layer(tokens);
 @import './tokens/color-primitives.css' layer(tokens);
+@import './tokens/sizes.css' layer(tokens);
 @import './tokens/spacing.css' layer(tokens);
 @import './tokens/typography.css' layer(tokens);
 @import './tokens/motion.css' layer(tokens);

@@ -1,18 +1,21 @@
 :root {
-  --space-0: 0;
-  --space-1: 0.2rem;
-  --space-2: 0.4rem;
-  --space-3: 0.8rem;
-  --space-4: 1.2rem;
-  --space-5: 1.6rem;
-  --space-6: 2rem;
-  --space-7: 2.4rem;
-  --space-8: 3.2rem;
-  --space-9: 4rem;
-  --space-10: 4.8rem;
-  --space-11: 5.6rem;
-  --space-12: 6.4rem;
-  --space-13: 8rem;
-  --space-14: 9.6rem;
-  --space-15: 12rem;
+  /* Spacing uses a 4px scale. */
+  --space-0: 0;           /* 0 */
+  --space-2px: 0.125rem;  /* 2px */
+  --space-4px: 0.25rem;   /* 4px */
+  --space-8px: 0.5rem;    /* 8px */
+  --space-12px: 0.75rem;  /* 12px */
+  --space-16px: 1rem;     /* 16px */
+  --space-20px: 1.25rem;  /* 20px */
+  --space-24px: 1.5rem;   /* 24px */
+  --space-28px: 1.75rem;  /* 28px */
+  --space-32px: 2rem;     /* 32px */
+  --space-36px: 2.25rem;  /* 36px */
+  --space-40px: 2.5rem;   /* 40px */
+  --space-44px: 2.75rem;  /* 44px */
+  --space-48px: 3rem;     /* 48px */
+  --space-52px: 3.25rem;  /* 52px */
+  --space-56px: 3.5rem;   /* 56px */
+  --space-60px: 3.75rem;  /* 60px */
+  --space-64px: 4rem;     /* 64px */
 }
