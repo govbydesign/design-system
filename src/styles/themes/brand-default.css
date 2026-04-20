@@ -1,8 +1,0 @@
-:root:not([data-brand]),
-[data-brand='brand-default'] {
-  --brand-name: 'Default';
-  --color-brand-strong: var(--color-indigo-600);
-  --color-brand-accent: var(--color-cyan-500);
-  --color-brand-muted: color-mix(in oklch, var(--color-indigo-50) 78%, white 22%);
-  --color-surface-page: color-mix(in oklch, white 92%, var(--color-indigo-50) 8%);
-}

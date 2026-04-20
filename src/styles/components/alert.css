@@ -24,7 +24,7 @@ like var(--color-surface-page). */
   --alert-border: color-mix(in oklch, var(--color-warning) 32%, white 68%);
 }
 
-.alert--danger {
-  --alert-bg: color-mix(in oklch, var(--color-danger) 14%, white 86%);
-  --alert-border: color-mix(in oklch, var(--color-danger) 28%, white 72%);
+.alert--error {
+  --alert-bg: color-mix(in oklch, var(--color-error) 14%, white 86%);
+  --alert-border: color-mix(in oklch, var(--color-error) 28%, white 72%);
 }

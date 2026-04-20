@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Theme Palette</title>
+  <style>
+    :root {
+      --color-primary: #00274f;
+      --color-secondary: #335a7a;
+      --color-gold: #d6b25e;
+      --color-red: #a84a4a;
+      --color-grey: #8a949f;
+      --hybrid-primary: #00274f;
+      --hybrid-coral: #fb4c42;
+      --hybrid-baby-blue: #b9dcff;
+      --hybrid-steel-blue: #5f8fbe;
+      --hybrid-grey: #8d98a5;
+      --gov-primary: #12395b;
+      --gov-secondary: #3e6f8e;
+      --gov-mint: #c7e8df;
+      --gov-accent: #2f8f83;
+      --gov-grey: #7f8d99;
+      --color-ink: #0f1720;
+      --color-paper: #f6f8fb;
+      --shadow: 0 18px 50px rgba(0, 39, 79, 0.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      color: var(--color-ink);
+      background:
+        radial-gradient(circle at top left, rgba(214, 178, 94, 0.24), transparent 24%),
+        linear-gradient(180deg, #fbfcfe 0%, var(--color-paper) 100%);
+      padding: 48px 24px;
+    }
+
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      gap: 36px;
+    }
+
+    .hero {
+      background: white;
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      min-height: 320px;
+    }
+
+    .hero--hybrid {
+      box-shadow: 0 18px 50px rgba(0, 39, 79, 0.16);
+    }
+
+    .hero-copy {
+      padding: 44px;
+      display: grid;
+      gap: 18px;
+      align-content: center;
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: var(--color-primary);
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 54ch;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #445160;
+    }
+
+    .hero-preview {
+      background:
+        linear-gradient(145deg, rgba(0, 39, 79, 0.98), rgba(51, 90, 122, 0.96));
+      padding: 32px;
+      display: grid;
+      align-content: center;
+    }
+
+    .hero-preview--hybrid {
+      background:
+        linear-gradient(145deg, rgba(0, 39, 79, 0.98), rgba(95, 143, 190, 0.94));
+    }
+
+    .hero--government {
+      box-shadow: 0 18px 50px rgba(18, 57, 91, 0.16);
+    }
+
+    .hero-preview--government {
+      background:
+        linear-gradient(145deg, rgba(18, 57, 91, 0.98), rgba(47, 143, 131, 0.92));
+    }
+
+    .mock-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 24px;
+      padding: 28px;
+      color: white;
+      display: grid;
+      gap: 18px;
+      backdrop-filter: blur(14px);
+    }
+
+    .mock-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      width: fit-content;
+      background: var(--color-gold);
+      color: var(--color-primary);
+    }
+
+    .mock-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 0;
+    }
+
+    .button-primary {
+      background: var(--color-gold);
+      color: var(--color-primary);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .swatch {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .swatch-color {
+      height: 180px;
+    }
+
+    .swatch-meta {
+      padding: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .swatch-name {
+      margin: 0;
+      font-size: 0.98rem;
+      font-weight: 800;
+    }
+
+    .swatch-role {
+      margin: 0;
+      color: #596776;
+      font-size: 0.95rem;
+    }
+
+    .swatch-code {
+      margin: 0;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92rem;
+      color: #213040;
+    }
+
+    .usage {
+      background: white;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .section-title {
+      margin: 0 0 -8px;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #66758a;
+      font-weight: 800;
+    }
+
+    .usage h2 {
+      margin: 0 0 14px;
+      font-size: 1.4rem;
+      color: var(--color-primary);
+    }
+
+    .usage-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .usage-item {
+      border-radius: 18px;
+      padding: 16px;
+      background: #f8fafc;
+      border: 1px solid #e5ebf2;
+    }
+
+    .usage-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--color-primary);
+    }
+
+    .usage-item span {
+      color: #586575;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .palette,
+      .usage-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Theme color palette</p>
+        <h1>Deep navy with warm editorial accents.</h1>
+        <p>
+          This five-color website palette uses <strong>#00274f</strong> as the anchor,
+          then balances it with a softer supporting blue, a muted red, a refined gold,
+          and a practical neutral grey for interface depth and content structure.
+        </p>
+      </div>
+      <div class="hero-preview">
+        <div class="mock-card">
+          <span class="mock-chip">Gold Accent</span>
+          <div>
+            <h2 style="margin: 0 0 10px; font-size: 1.8rem; line-height: 1.1; color: white;">Brand-ready website colors</h2>
+            <p style="margin: 0; color: rgba(255,255,255,0.78); line-height: 1.6;">
+              Strong contrast for navigation and headers, with warmer accents for calls to action, badges, and featured content.
+            </p>
+          </div>
+          <div class="mock-actions">
+            <button class="button button-primary">Primary Action</button>
+            <button class="button button-secondary">Secondary Link</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="section-title">Hybrid Theme</p>
+
+    <section class="hero hero--hybrid">
+      <div class="hero-copy">
+        <p class="eyebrow" style="color: var(--hybrid-coral);">Theme color palette</p>
+        <h1 style="color: var(--hybrid-primary);">Trusted navy with brighter supporting accents.</h1>
+        <p>
+          This alternate five-color website palette keeps <strong>#00274f</strong> as the
+          structural anchor, then pairs it with <strong>#fb4c42</strong>, a baby blue,
+          a supporting steel blue, and a mid grey for a cleaner and more modern interface direction.
+        </p>
+      </div>
+      <div class="hero-preview hero-preview--hybrid">
+        <div class="mock-card">
+          <span class="mock-chip" style="background: var(--hybrid-baby-blue); color: var(--hybrid-primary);">Hybrid Accent</span>
+          <div>
+            <h2 style="margin: 0 0 10px; font-size: 1.8rem; line-height: 1.1; color: white;">Calm structure, stronger interaction color</h2>
+            <p style="margin: 0; color: rgba(255,255,255,0.82); line-height: 1.6;">
+              A dependable website palette for content-heavy layouts and marketing surfaces, with brighter accents reserved for action and emphasis.
+            </p>
+          </div>
+          <div class="mock-actions">
+            <button class="button button-primary" style="background: var(--hybrid-coral); color: white;">Get Started</button>
+            <button class="button button-secondary">See Details</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="palette">
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--color-primary);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Primary Navy</p>
+          <p class="swatch-role">Headers, navigation, footer, key brand moments</p>
+          <p class="swatch-code">#00274F</p>
+          <p class="swatch-code">oklch(24.67% 0.082 257.14)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--color-secondary);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Supporting Blue</p>
+          <p class="swatch-role">Secondary panels, hover states, data/UI accents</p>
+          <p class="swatch-code">#335A7A</p>
+          <p class="swatch-code">oklch(45.31% 0.065 250.92)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--color-gold);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Gold Accent</p>
+          <p class="swatch-role">Primary CTAs, highlight bars, premium details</p>
+          <p class="swatch-code">#D6B25E</p>
+          <p class="swatch-code">oklch(77.62% 0.106 85.46)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--color-red);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Muted Red</p>
+          <p class="swatch-role">Alerts, editorial emphasis, warm contrast moments</p>
+          <p class="swatch-code">#A84A4A</p>
+          <p class="swatch-code">oklch(54.69% 0.142 27.12)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--color-grey);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Interface Grey</p>
+          <p class="swatch-role">Borders, secondary text, form surfaces, dividers</p>
+          <p class="swatch-code">#8A949F</p>
+          <p class="swatch-code">oklch(66.43% 0.022 252.84)</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="palette">
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--hybrid-primary);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Primary Navy</p>
+          <p class="swatch-role">Navigation, headings, layout shell, footer, structural brand moments</p>
+          <p class="swatch-code">#00274F</p>
+          <p class="swatch-code">oklch(24.67% 0.082 257.14)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--hybrid-coral);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Coral Accent</p>
+          <p class="swatch-role">Primary buttons, alerts, highlight actions, featured emphasis</p>
+          <p class="swatch-code">#FB4C42</p>
+          <p class="swatch-code">oklch(67.09% 0.212 29.34)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--hybrid-baby-blue);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Baby Blue</p>
+          <p class="swatch-role">Soft surfaces, information panels, highlight backgrounds, airy support color</p>
+          <p class="swatch-code">#B9DCFF</p>
+          <p class="swatch-code">oklch(89.08% 0.050 245.31)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--hybrid-steel-blue);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Steel Blue</p>
+          <p class="swatch-role">Secondary actions, hover states, sub-navigation, iconography, data accents</p>
+          <p class="swatch-code">#5F8FBE</p>
+          <p class="swatch-code">oklch(64.40% 0.087 250.68)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--hybrid-grey);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Mid Grey</p>
+          <p class="swatch-role">Borders, muted text, dividers, form surfaces, neutral UI support</p>
+          <p class="swatch-code">#8D98A5</p>
+          <p class="swatch-code">oklch(68.04% 0.017 255.84)</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="usage">
+      <h2>Suggested Website Usage</h2>
+      <div class="usage-grid">
+        <div class="usage-item">
+          <strong>Primary Navy</strong>
+          <span>Use for the global shell, navigation, hero headings, and strong brand blocks.</span>
+        </div>
+        <div class="usage-item">
+          <strong>Supporting Blue</strong>
+          <span>Use for secondary surfaces, hovers, info cards, and softer navigation states.</span>
+        </div>
+        <div class="usage-item">
+          <strong>Gold Accent</strong>
+          <span>Use sparingly for CTA buttons, featured content labels, and trust indicators.</span>
+        </div>
+        <div class="usage-item">
+          <strong>Muted Red</strong>
+          <span>Use for alerts, featured highlights, editorial emphasis, or contrasting badges.</span>
+        </div>
+        <div class="usage-item">
+          <strong>Interface Grey</strong>
+          <span>Use for neutral UI structure such as outlines, muted copy, and background layers.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="usage">
+      <h2 style="color: var(--hybrid-primary);">Suggested Website Usage For Hybrid Theme</h2>
+      <div class="usage-grid">
+        <div class="usage-item">
+          <strong style="color: var(--hybrid-primary);">Primary Navy</strong>
+          <span>Use for navigation, page headers, footers, and the main site framework.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--hybrid-primary);">Coral Accent</strong>
+          <span>Use for primary CTAs, alerts, badges, and high-priority interaction moments.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--hybrid-primary);">Baby Blue</strong>
+          <span>Use for soft content blocks, info banners, secondary panels, and lighter emphasis areas.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--hybrid-primary);">Steel Blue</strong>
+          <span>Use for secondary buttons, hover treatments, chart colors, and supporting navigation accents.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--hybrid-primary);">Mid Grey</strong>
+          <span>Use to ground the interface through borders, muted text, cards, and form structure.</span>
+        </div>
+      </div>
+    </section>
+
+    <p class="section-title">Federal Theme</p>
+
+    <section class="hero hero--government">
+      <div class="hero-copy">
+        <p class="eyebrow" style="color: var(--gov-accent);">Theme color palette</p>
+        <h1 style="color: var(--gov-primary);">Professional civic tone with a cleaner modern edge.</h1>
+        <p>
+          This federal-government palette is designed to feel trustworthy, calm, and service-oriented
+          without falling into the usual dull visual language. It uses a deep civic blue as the anchor,
+          a cooler supporting blue, a fresh mint surface tone, a confident teal accent, and a practical grey
+          for interface structure.
+        </p>
+      </div>
+      <div class="hero-preview hero-preview--government">
+        <div class="mock-card">
+          <span class="mock-chip" style="background: var(--gov-mint); color: var(--gov-primary);">Public Service</span>
+          <div>
+            <h2 style="margin: 0 0 10px; font-size: 1.8rem; line-height: 1.1; color: white;">Clearer, more welcoming government UX</h2>
+            <p style="margin: 0; color: rgba(255,255,255,0.82); line-height: 1.6;">
+              Built for service portals, information-heavy pages, and trusted civic interactions where clarity,
+              accessibility, and professionalism matter as much as visual freshness.
+            </p>
+          </div>
+          <div class="mock-actions">
+            <button class="button button-primary" style="background: var(--gov-mint); color: var(--gov-primary);">Start Service</button>
+            <button class="button button-secondary">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="palette">
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--gov-primary);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Civic Blue</p>
+          <p class="swatch-role">Site header, navigation, page titles, primary trust anchors</p>
+          <p class="swatch-code">#12395B</p>
+          <p class="swatch-code">oklch(33.74% 0.066 247.82)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--gov-secondary);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Service Blue</p>
+          <p class="swatch-role">Secondary buttons, content bands, charting, supporting navigation</p>
+          <p class="swatch-code">#3E6F8E</p>
+          <p class="swatch-code">oklch(53.46% 0.076 241.94)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--gov-mint);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Mint Surface</p>
+          <p class="swatch-role">Information panels, success surfaces, featured service blocks</p>
+          <p class="swatch-code">#C7E8DF</p>
+          <p class="swatch-code">oklch(91.00% 0.036 176.42)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--gov-accent);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Teal Accent</p>
+          <p class="swatch-role">Primary actions, status emphasis, progress indicators, links</p>
+          <p class="swatch-code">#2F8F83</p>
+          <p class="swatch-code">oklch(61.68% 0.095 189.14)</p>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch-color" style="background: var(--gov-grey);"></div>
+        <div class="swatch-meta">
+          <p class="swatch-name">Administrative Grey</p>
+          <p class="swatch-role">Borders, tables, muted text, form framing, utility UI</p>
+          <p class="swatch-code">#7F8D99</p>
+          <p class="swatch-code">oklch(64.48% 0.016 245.98)</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="usage">
+      <h2 style="color: var(--gov-primary);">Suggested Website Usage For Federal Theme</h2>
+      <div class="usage-grid">
+        <div class="usage-item">
+          <strong style="color: var(--gov-primary);">Civic Blue</strong>
+          <span>Use for the global shell, agency masthead, service category headers, and trusted navigation zones.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--gov-primary);">Service Blue</strong>
+          <span>Use for secondary surfaces, data views, section dividers, and navigational support patterns.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--gov-primary);">Mint Surface</strong>
+          <span>Use to soften dense pages with approachable feature panels, notices, and task-oriented content areas.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--gov-primary);">Teal Accent</strong>
+          <span>Use for action states, progress indicators, success messaging, and modern interactive emphasis.</span>
+        </div>
+        <div class="usage-item">
+          <strong style="color: var(--gov-primary);">Administrative Grey</strong>
+          <span>Use for gridlines, muted copy, forms, dividers, and neutral layout framing.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

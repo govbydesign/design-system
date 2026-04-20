@@ -1,0 +1,70 @@
+:root {
+  /* Clam Function Calculator.
+  * https://www.marcbacon.com/tools/clamp-calculator/
+  *
+  * - Base font = 16px = 1rem
+  * - Min viewport width = 320px
+  * - Max viewport width = 1280px
+  * - Function value: clamp(min-text-size, 1rem + 5vw, max-text-size);
+  */
+
+  /* Body text size primitive custom properties. */
+  --10px: 0.625rem;   /* 10px */
+  --12px: 0.75rem;    /* 12px */
+  --14px: 0.778rem;   /* 14px */
+  --16px: 0.889rem;   /* 16px */
+  --18px: 1rem;       /* 18px */
+  --20px: 1.111rem;   /* 20px */
+  --22px: 1.222rem;   /* 22px */
+  --24px: 1.333rem;   /* 24px */
+  --26px: 1.444rem;   /* 26px */
+  --28px: 1.556rem;   /* 28px */
+  --30px: 1.667rem;   /* 30px */
+  --32px: 2rem;       /* 32px */
+  --34px: 2.125rem;   /* 34px */
+  --36px: 2.25rem;    /* 36px */
+  --38px: 2.375rem;   /* 38px */
+  --40px: 2.5rem;     /* 40px */
+  --42px: 2.625rem;   /* 42px */
+  --44px: 2.75rem;    /* 44px */
+  --46px: 2.875rem;   /* 46px */
+  --48px: 3rem;       /* 48px */
+  --50px: 3.125rem;   /* 50px */
+  --52px: 3.25rem;    /* 52px */
+  --54px: 3.375rem;   /* 54px */
+  --56px: 3.5rem;     /* 56px */
+  --58px: 3.625rem;   /* 58px */
+  --60px: 3.75rem;    /* 60px */
+  --62px: 3.875rem;   /* 62px */
+  --64px: 4rem;       /* 64px */
+  --80px: 5rem;       /* 80px */
+
+  /* Headings font size primitive custom properties. */
+  --h1-title-sm: var(--52px); /* 52px */
+  --h1-title-lg: var(--64px); /* 64px */
+  --h1-sm: var(--48px);       /* 48px */
+  --h1-lg: var(--60px);       /* 60px */
+  --h2-sm: var(--40px);       /* 40px */
+  --h2-lg: var(--48px);       /* 48px */
+  --h3-sm: var(--32px);       /* 32px */
+  --h3-lg: var(--40px);       /* 40px */
+  --h4-sm: var(--24px);       /* 24px */
+  --h4-lg: var(--32px);       /* 32px */
+  --h5-sm: var(--22px);       /* 22px */
+  --h5-lg: var(--24px);       /* 24px */
+
+  /* Body text size semantic custom properties. */
+  --theme-body-text-sm: clamp(var(--14px), 0.741rem + 0.208vw, var(--16px));
+  --theme-body-text-base: clamp(var(--16px), 0.852rem + 0.208vw, var(--18px));
+  --theme-body-text-lg: clamp(var(--18px), 0.963rem + 0.208vw, var(--20px));
+  --theme-body-text-xl: clamp(var(--20px), 1.074rem + 0.208vw, var(--22px));
+  --theme-body-text-2xl: clamp(var(--22px), 1.185rem + 0.208vw, var(--24px));
+
+  /* Headings font size semantic custom properties. */
+  --h1-title-size: clamp(var(--h1-title-sm), 2.667rem + 1.25vw, var(--h1-title-lg));
+  --h1-size: clamp(var(--h1-sm), 2.444rem + 1.25vw, var(--h1-lg));
+  --h2-size: clamp(var(--h2-sm), 2.074rem + 0.833vw, var(--h2-lg));
+  --h3-size: clamp(var(--h3-sm), 1.63rem + 0.833vw, var(--h3-lg));
+  --h4-size: clamp(var(--h4-sm), 1.185rem + 0.833vw, var(--h4-lg));
+  --h5-size: clamp(var(--h5-sm), 1.185rem + 0.208vw, var(--h5-lg));
+}

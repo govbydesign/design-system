@@ -1,7 +1,0 @@
-[data-brand='brand-a'] {
-  --brand-name: 'Brand A';
-  --color-brand-strong: var(--color-rose-600);
-  --color-brand-accent: var(--color-amber-500);
-  --color-brand-muted: color-mix(in oklch, var(--color-rose-50) 78%, white 22%);
-  --color-surface-page: color-mix(in oklch, white 92%, var(--color-rose-50) 8%);
-}

@@ -1,4 +1,5 @@
 :root {
+  --font-family-base: 'Inter', 'BlinkMacSystemFont', 'Segoe UI', Roboto, Helvetica, Arial, Sans-Serif;
   --font-family-sans: 'Sora', 'Avenir Next', 'Segoe UI', sans-serif;
   --font-family-display: 'Clash Display', 'Sora', 'Avenir Next', sans-serif;
   --font-family-mono: 'JetBrains Mono', 'SFMono-Regular', monospace;
@@ -7,7 +8,7 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-black: 800;
+  --font-weight-heavy: 800;
 
   --font-size-2xs: clamp(1.1rem, 1rem + 0.08vw, 1.2rem);
   --font-size-xs: clamp(1.2rem, 1.1rem + 0.1vw, 1.3rem);
@@ -29,13 +30,13 @@
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.08em;
 
-  --text-title-display: var(--font-weight-black) var(--font-size-4xl) / var(--line-height-tight) var(--font-family-display);
+  --text-title-display: var(--font-weight-heavy) var(--font-size-4xl) / var(--line-height-tight) var(--font-family-display);
   --text-title-h1: var(--font-weight-bold) var(--font-size-3xl) / var(--line-height-tight) var(--font-family-display);
   --text-title-h2: var(--font-weight-bold) var(--font-size-2xl) / var(--line-height-snug) var(--font-family-display);
   --text-title-h3: var(--font-weight-semibold) var(--font-size-xl) / var(--line-height-snug) var(--font-family-display);
-  --text-body-lg: var(--font-weight-regular) var(--font-size-lg) / var(--line-height-relaxed) var(--font-family-sans);
-  --text-body-md: var(--font-weight-regular) var(--font-size-md) / var(--line-height-relaxed) var(--font-family-sans);
-  --text-body-sm: var(--font-weight-regular) var(--font-size-sm) / var(--line-height-normal) var(--font-family-sans);
-  --text-label: var(--font-weight-semibold) var(--font-size-xs) / 1 var(--font-family-sans);
+  --text-body-lg: var(--font-weight-regular) var(--font-size-lg) / var(--line-height-relaxed) var(--font-family-base);
+  --text-body-md: var(--font-weight-regular) var(--font-size-md) / var(--line-height-relaxed) var(--font-family-base);
+  --text-body-sm: var(--font-weight-regular) var(--font-size-sm) / var(--line-height-normal) var(--font-family-base);
+  --text-label: var(--font-weight-semibold) var(--font-size-xs) / 1 var(--font-family-base);
   --text-code: var(--font-weight-medium) var(--font-size-xs) / 1.5 var(--font-family-mono);
 }

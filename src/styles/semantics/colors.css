@@ -1,4 +1,8 @@
 :root {
+  --color-theme-primary:
+  --color-theme-secondary:
+  --color-theme-muted:
+
   --color-brand-strong: var(--color-indigo-600);
   --color-brand-accent: var(--color-cyan-500);
   --color-brand-muted: color-mix(in oklch, var(--color-indigo-50) 78%, white 22%);
@@ -15,5 +19,5 @@
   --color-info: var(--color-blue-600);
   --color-success: var(--color-emerald-600);
   --color-warning: var(--color-amber-600);
-  --color-danger: var(--color-rose-600);
+  --color-error: var(--color-rose-600);
 }

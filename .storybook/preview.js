@@ -3,16 +3,16 @@
 import '../src/styles/index.css';
 
 const applyGlobals = (globals) => {
-  document.documentElement.dataset.theme = globals.theme;
-  document.documentElement.dataset.brand = globals.brand;
-  document.body.dataset.theme = globals.theme;
-  document.body.dataset.brand = globals.brand;
+  document.documentElement.dataset.theme = globals.mode;
+  document.documentElement.dataset.brand = globals.theme;
+  document.body.dataset.theme = globals.mode;
+  document.body.dataset.brand = globals.theme;
 };
 
 const preview = {
   globalTypes: {
-    theme: {
-      name: 'Theme',
+    mode: {
+      name: 'Mode',
       description: 'Color mode',
       defaultValue: 'light',
       toolbar: {
@@ -23,21 +23,27 @@ const preview = {
         ],
       },
     },
-    brand: {
-      name: 'Brand',
-      description: 'Brand flavor',
-      defaultValue: 'brand-default',
+    theme: {
+      name: 'Theme',
+      description: 'Website theme',
+      defaultValue: 'evergreen',
       toolbar: {
-        icon: 'paintbrush',
+        icon: 'brush',
         items: [
-          { value: 'brand-default', title: 'Default' },
-          { value: 'brand-a', title: 'Brand A' },
-          { value: 'brand-b', title: 'Brand B' },
+          { value: 'evergreen', title: 'Evergreen' },
+          { value: 'judiciary', title: 'Judiciary' },
+          { value: 'civic-theme', title: 'Civic Theme' },
         ],
       },
     },
   },
   parameters: {
+    options: {
+      storySort: {
+        order: ['Foundations', 'Components', 'Examples'],
+        includeName: true,
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

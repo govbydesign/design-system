@@ -1,0 +1,178 @@
+html,
+body {
+  min-block-size: 100dvh;
+}
+
+/* Global reset for disabling animations and transitions for users who prefer
+reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after,
+  *::details-content {
+    animation-delay: 0ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, color-mix(in oklch, var(--brand-core-200) 24%, transparent), transparent 28%),
+    linear-gradient(180deg, color-mix(in oklch, var(--sys-color-surface-canvas) 96%, white 4%), var(--sys-color-surface-canvas));
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: transparent;
+  color: var(--sys-color-text-primary);
+  font-size: var(--theme-body-text-base);
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 0.08em;
+  text-decoration-color: color-mix(in oklch, currentColor 32%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:active {
+  text-decoration-color: currentColor;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  color: var(--sys-color-text-primary);
+  letter-spacing: var(--letter-spacing-slight);
+  text-wrap: balance;
+}
+
+h1 {
+  font: var(--text-title-h1);
+}
+
+h2 {
+  font: var(--text-title-h2);
+}
+
+h3 {
+  font: var(--text-title-h3);
+}
+
+p,
+li {
+  max-inline-size: 70ch;
+}
+
+code,
+pre,
+kbd {
+  font: var(--text-code);
+}
+
+img,
+iframe,
+video,
+canvas {
+  display: block;
+  max-inline-size: 100%;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--brand-core-300) 42%, transparent);
+}
+
+/* Only show focus outline when navigation with keyboard.
+https://medienbaecker.com/articles/focus-outlines */
+*:focus-visible {
+  border-radius: 4px;
+  outline-color: currentColor;
+  outline-offset: 2px;
+  outline-style: solid;
+  outline-width: 2px;
+  overflow: hidden;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+summary,
+[role='button'],
+[tabindex]:not([tabindex='-1']) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(button, input, select, textarea) {
+  color: inherit;
+  font: inherit;
+}
+
+:where(input, select, textarea) {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  min-block-size: 4.4rem;
+  padding-inline: var(--space-5);
+}
+
+:where(button, [role='button'], summary) {
+  min-block-size: 4.4rem;
+}
+
+:where(input, select, textarea):disabled,
+:where(button):disabled,
+[aria-disabled='true'] {
+  cursor: not-allowed;
+  opacity: var(--state-disabled-opacity);
+}
+
+:where(input, select, textarea)[readonly] {
+  background: color-mix(in oklch, var(--color-surface-sunken) 70%, var(--color-surface-raised) 30%);
+}
+
+:where(button, [role='button'], summary):focus {
+  outline: none;
+}
+
+@media (prefers-contrast: more) {
+  :where(input, select, textarea) {
+    border-width: 2px;
+  }
+}
+
+@media (forced-colors: active) {
+  :where(input, select, textarea, button, [role='button'], summary) {
+    border: 1px solid ButtonText;
+    forced-color-adjust: auto;
+  }
+
+  :where([aria-disabled='true'], :disabled) {
+    border-color: GrayText;
+    color: GrayText;
+    opacity: 1;
+  }
+}
+
+/* Anything that has been anchored to should have extra scroll margin
+5ex is unit of measurement based on the x-height of the current font
+(roughly the height of a lowercase "x"). */
+:target {
+  scroll-margin-block: 5ex;
+}

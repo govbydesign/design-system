@@ -12,7 +12,7 @@ const semanticTokens = [
   ['Default Border', '--color-border-default'],
   ['Focus Ring', '--color-focus-ring'],
   ['Success', '--color-success'],
-  ['Danger', '--color-danger'],
+  ['Error', '--color-error'],
 ];
 
 const typeTokens = [
@@ -263,7 +263,6 @@ const renderFullPalette = () => {
 
 export default {
   title: 'Foundations/System',
-  tags: ['autodocs'],
 };
 
 export const Overview = {

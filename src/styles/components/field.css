@@ -23,13 +23,13 @@
 }
 
 .field__input[aria-invalid='true'] {
-  border-color: var(--color-danger);
+  border-color: var(--color-error);
 }
 
 .field__input[aria-invalid='true']:focus-visible {
   box-shadow:
     0 0 0 0.2rem var(--color-surface-page),
-    0 0 0 0.5rem color-mix(in oklch, var(--color-danger) 42%, transparent);
+    0 0 0 0.5rem color-mix(in oklch, var(--color-error) 42%, transparent);
 }
 
 .field__hint {
