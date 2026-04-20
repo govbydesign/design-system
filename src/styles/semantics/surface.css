@@ -1,0 +1,9 @@
+:root {
+  --color-surface-page: color-mix(in oklch, white 92%, var(--color-indigo-50) 8%);
+  --color-surface-raised: rgba(255, 255, 255, 0.76);
+  --color-surface-sunken: color-mix(in oklch, var(--color-zinc-100) 86%, var(--color-indigo-50) 14%);
+  --color-surface-brand: var(--color-brand-strong);
+  --color-surface-brand-muted: var(--color-brand-muted);
+  --color-surface-accent: color-mix(in oklch, var(--color-brand-accent) 18%, white 82%);
+  --color-overlay: oklch(18% 0.02 270 / 0.6);
+}

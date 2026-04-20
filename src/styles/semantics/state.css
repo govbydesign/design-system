@@ -1,0 +1,5 @@
+:root {
+  --state-hover-lift: -0.1rem;
+  --state-disabled-opacity: 0.48;
+  --state-backdrop-blur: 24px;
+}

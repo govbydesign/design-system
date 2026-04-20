@@ -1,0 +1,8 @@
+:root:not([data-brand]),
+[data-brand='evergreen'] {
+  --brand-name: 'Evergreen';
+  --color-brand-strong: oklch(24.67% 0.082 257.14);
+  --color-brand-accent: oklch(77.62% 0.106 85.46);
+  --color-brand-muted: color-mix(in oklch, oklch(92% 0.022 239.44) 72%, white 28%);
+  --color-surface-page: color-mix(in oklch, white 92%, oklch(92% 0.022 239.44) 8%);
+}

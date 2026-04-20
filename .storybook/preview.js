@@ -1,32 +1,19 @@
 /** @type { import('@storybook/html-vite').Preview } */
 
-import '../src/css/styles.css';
+import '../src/styles/index.css';
 
 const applyGlobals = (globals) => {
-  document.documentElement.dataset.theme = globals.theme;
-  document.documentElement.dataset.colorMode = globals.colorMode;
-  document.body.dataset.theme = globals.theme;
-  document.body.dataset.colorMode = globals.colorMode;
+  document.documentElement.dataset.theme = globals.mode;
+  document.documentElement.dataset.brand = globals.theme;
+  document.body.dataset.theme = globals.mode;
+  document.body.dataset.brand = globals.theme;
 };
 
 const preview = {
   globalTypes: {
-    theme: {
-      name: 'Theme',
-      description: 'Platform brand theme',
-      defaultValue: 'atlas',
-      toolbar: {
-        icon: 'paintbrush',
-        items: [
-          { value: 'atlas', title: 'Atlas' },
-          { value: 'evergreen', title: 'Evergreen' },
-          { value: 'pulse', title: 'Pulse' },
-        ],
-      },
-    },
-    colorMode: {
+    mode: {
       name: 'Mode',
-      description: 'Light and dark color modes',
+      description: 'Color mode',
       defaultValue: 'light',
       toolbar: {
         icon: 'mirror',
@@ -36,8 +23,27 @@ const preview = {
         ],
       },
     },
+    theme: {
+      name: 'Theme',
+      description: 'Website theme',
+      defaultValue: 'evergreen',
+      toolbar: {
+        icon: 'brush',
+        items: [
+          { value: 'evergreen', title: 'Evergreen' },
+          { value: 'judiciary', title: 'Judiciary' },
+          { value: 'civic-theme', title: 'Civic Theme' },
+        ],
+      },
+    },
   },
   parameters: {
+    options: {
+      storySort: {
+        order: ['Foundations', 'Components', 'Examples'],
+        includeName: true,
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,

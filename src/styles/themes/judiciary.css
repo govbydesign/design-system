@@ -1,0 +1,7 @@
+[data-brand='judiciary'] {
+  --brand-name: 'Judiciary';
+  --color-brand-strong: oklch(24.67% 0.082 257.14);
+  --color-brand-accent: oklch(67.09% 0.212 29.34);
+  --color-brand-muted: color-mix(in oklch, oklch(89.08% 0.05 245.31) 78%, white 22%);
+  --color-surface-page: color-mix(in oklch, white 90%, oklch(89.08% 0.05 245.31) 10%);
+}

@@ -1,0 +1,7 @@
+[data-brand='civic-theme'] {
+  --brand-name: 'Civic Theme';
+  --color-brand-strong: oklch(33.74% 0.066 247.82);
+  --color-brand-accent: oklch(61.68% 0.095 189.14);
+  --color-brand-muted: color-mix(in oklch, oklch(92.26% 0.016 166.7) 76%, white 24%);
+  --color-surface-page: color-mix(in oklch, white 90%, oklch(92.26% 0.016 166.7) 10%);
+}

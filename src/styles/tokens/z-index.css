@@ -1,0 +1,9 @@
+:root {
+  --zi-below: -1;
+  --zi-base: 0;
+  --zi-low: 10;
+  --zi-medium: 20;
+  --zi-high: 30;
+  --zi-higher: 40;
+  --zi-highest: 100;
+}

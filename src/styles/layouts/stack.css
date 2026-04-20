@@ -1,0 +1,4 @@
+.l-stack {
+  display: grid;
+  gap: var(--stack-space, var(--space-6));
+}

@@ -7,6 +7,6 @@
   background: var(--sys-color-surface-raised);
   border: 1px solid var(--sys-color-border-default);
   border-radius: var(--radius-md);
-  min-height: 4.4rem;
+  min-block-size: 4.4rem;
   padding: 0 var(--space-5);
 }

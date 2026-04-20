@@ -1,24 +1,25 @@
 import './foundations.css';
+import { formatHex, parse } from 'culori';
 import { paletteFamilies } from './foundationPalette.js';
 
 const semanticTokens = [
-  ['Canvas', '--sys-color-surface-canvas'],
-  ['Raised', '--sys-color-surface-raised'],
-  ['Brand Surface', '--sys-color-surface-brand'],
-  ['Primary Text', '--sys-color-text-primary'],
-  ['Secondary Text', '--sys-color-text-secondary'],
-  ['Brand Text', '--sys-color-text-brand'],
-  ['Default Border', '--sys-color-border-default'],
-  ['Focus Ring', '--sys-color-focus-ring'],
-  ['Success', '--sys-color-success'],
-  ['Danger', '--sys-color-danger'],
+  ['Page Surface', '--color-surface-page'],
+  ['Raised Surface', '--color-surface-raised'],
+  ['Brand Surface', '--color-surface-brand'],
+  ['Primary Text', '--color-text-primary'],
+  ['Secondary Text', '--color-text-secondary'],
+  ['Brand Text', '--color-text-brand'],
+  ['Default Border', '--color-border-default'],
+  ['Focus Ring', '--color-focus-ring'],
+  ['Success', '--color-success'],
+  ['Error', '--color-error'],
 ];
 
 const typeTokens = [
-  ['Display', '--text-title-display', 'Modern systems benefit from a distinct display voice for hero surfaces and campaign moments.'],
-  ['Heading XL', '--text-title-h1', 'Use the large heading token for page titles, dashboards, and high-attention modules.'],
-  ['Heading L', '--text-title-h2', 'This token anchors section titles and larger content groupings.'],
-  ['Heading M', '--text-title-h3', 'Use medium headings inside cards, settings panes, and story sections.'],
+  ['Display', '--text-display', 'Modern systems benefit from a distinct display voice for hero surfaces and campaign moments.'],
+  ['Heading XL', '--text-heading-1', 'Use the large heading token for page titles, dashboards, and high-attention modules.'],
+  ['Heading L', '--text-heading-2', 'This token anchors section titles and larger content groupings.'],
+  ['Heading M', '--text-heading-3', 'Use medium headings inside cards, settings panes, and story sections.'],
   ['Body', '--text-body-md', 'Default reading size for most interface copy.'],
   ['Label', '--text-label', 'Dense, high-contrast text for controls and metadata.'],
   ['Code', '--text-code', 'Monospace token for developer-facing values and diagnostics.'],
@@ -33,16 +34,28 @@ const spaceTokens = [
   ['12', '--space-12'],
 ];
 
-const themes = [
-  ['Atlas', 'var(--ref-color-blue-500)', 'var(--ref-color-cyan-400)'],
-  ['Evergreen', 'var(--ref-color-emerald-500)', 'var(--ref-color-cyan-400)'],
-  ['Pulse', 'var(--ref-color-rose-500)', 'var(--ref-color-indigo-400)'],
+const brands = [
+  ['Brand Default', 'var(--color-indigo-500)', 'var(--color-cyan-400)'],
+  ['Brand A', 'var(--color-rose-500)', 'var(--color-amber-400)'],
+  ['Brand B', 'var(--color-emerald-500)', 'var(--color-cyan-400)'],
 ];
 
 const createElementFromHTML = (html) => {
   const template = document.createElement('template');
   template.innerHTML = html.trim();
   return template.content.firstElementChild;
+};
+
+const normalizeFamilyName = (familyName) =>
+  familyName
+    .toLowerCase()
+    .replace(/\s*\(.*?\)\s*/g, '')
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-');
+
+const colorToHex = (colorValue) => {
+  const parsed = parse(colorValue);
+  return parsed ? formatHex(parsed).toLowerCase() : '';
 };
 
 const renderOverview = () => {
@@ -57,21 +70,21 @@ const renderOverview = () => {
           <h1>Tokenized for a multi-brand platform.</h1>
           <p>
             The system is organized in three layers:
-            reference palettes as <code>--ref-color-family-step</code>,
-            theme brand ramps as <code>--brand-core-step</code>,
-            and semantic UI tokens as <code>--sys-color-role</code>.
+            primitive palettes as <code>--color-family-step</code>,
+            semantic interface tokens as <code>--color-role</code>,
+            and theme or brand overrides that remap semantics without changing component code.
           </p>
         </div>
         <div class="foundations-hero-grid">
           <article class="foundation-card foundation-stack">
             <h3>Color Naming</h3>
             <p>Reference colors stay stable while semantic tokens map them into surfaces, borders, text, feedback, and actions.</p>
-            <span class="foundation-token-value">--ref-color-indigo-500 -> --brand-core-500 -> --sys-color-text-brand</span>
+            <span class="foundation-token-value">--color-indigo-500 -> --color-brand-strong -> --color-text-brand</span>
           </article>
           <article class="foundation-card foundation-stack">
             <h3>Type Naming</h3>
             <p>Families, sizes, weights, and composed text recipes are split so theme and product work can evolve independently.</p>
-            <span class="foundation-token-value">--font-family-display + --font-size-3xl + --text-title-h1</span>
+            <span class="foundation-token-value">--font-family-display + --font-size-3xl + --text-heading-1</span>
           </article>
           <article class="foundation-card foundation-stack">
             <h3>Layout Naming</h3>
@@ -89,7 +102,7 @@ const renderOverview = () => {
   semanticTokens.forEach(([label, variable]) => {
     const card = createElementFromHTML(`
       <article class="foundation-card foundation-stack">
-        <div class="foundation-theme-chip" style="background: var(${variable}); color: ${label.includes('Canvas') || label.includes('Raised') ? 'var(--sys-color-text-primary)' : 'white'};">
+        <div class="foundation-theme-chip" style="background: var(${variable}); color: ${label.includes('Surface') ? 'var(--color-text-primary)' : 'white'};">
           ${label}
         </div>
         <span class="foundation-token-value">${variable}</span>
@@ -105,21 +118,21 @@ const renderOverview = () => {
 const renderThemes = () => {
   const root = document.createElement('section');
   root.className = 'foundations-page';
-  root.appendChild(createElementFromHTML(`<section class="foundation-card foundation-stack"><h2>Theme Variants</h2><p>Each brand changes its core ramp while the semantic token names stay fixed. Light and dark modes both inherit from the same semantic layer.</p></section>`));
+  root.appendChild(createElementFromHTML(`<section class="foundation-card foundation-stack"><h2>Mode And Brand Variants</h2><p>Light and dark modes shift the foundational surfaces and contrast model. Brands change brand-facing semantic tokens like action, link, focus, and branded surfaces.</p></section>`));
 
   const grid = document.createElement('section');
   grid.className = 'foundations-theme-grid';
 
-  themes.forEach(([name, brand, accent]) => {
+  brands.forEach(([name, brand, accent]) => {
     grid.appendChild(
       createElementFromHTML(`
         <article class="foundation-card foundation-stack">
           <h3>${name}</h3>
           <div class="foundation-theme-sample" style="background: linear-gradient(135deg, ${brand}, ${accent}); color: white;">
             <strong>Primary CTA</strong>
-            <span>Brand ramp + accent ramp</span>
+            <span>Semantic action tokens remapped by brand</span>
           </div>
-          <div class="foundation-theme-sample" style="background: color-mix(in oklch, ${brand} 12%, white 88%); color: var(--sys-color-text-primary);">
+          <div class="foundation-theme-sample" style="background: color-mix(in oklch, ${brand} 12%, white 88%); color: var(--color-text-primary);">
             <strong>Subtle surface</strong>
             <span>Useful for cards, tags, banners, and filters.</span>
           </div>
@@ -191,7 +204,7 @@ const renderSpacing = () => {
     createElementFromHTML(`
       <article class="foundation-card foundation-space-item">
         <span class="foundation-token-value">--radius-xl</span>
-        <div style="height: 6rem; border-radius: var(--radius-xl); background: var(--sys-color-action-primary-bg);"></div>
+        <div style="height: 6rem; border-radius: var(--radius-xl); background: var(--color-action-primary-bg);"></div>
         <span class="foundation-token-value">--shadow-md</span>
       </article>
     `)
@@ -207,8 +220,8 @@ const renderFullPalette = () => {
 
   const intro = createElementFromHTML(`
     <section class="foundation-card foundation-stack">
-      <h2>Reference Palette Library</h2>
-      <p>These are the reference palette families available to map into theme ramps. This layer stays raw and unopinionated so themes can shift without renaming semantic tokens.</p>
+      <h2>Colors Palette Library</h2>
+      <p>These are the colors palette families available to map into theme ramps. This layer stays raw and unopinionated so themes can shift without renaming semantic tokens.</p>
     </section>
   `);
   root.appendChild(intro);
@@ -224,12 +237,16 @@ const renderFullPalette = () => {
     swatches.className = 'swatches';
 
     family.swatches.forEach((swatch) => {
+      const tokenName = `--color-${normalizeFamilyName(family.name)}-${swatch.shade}`;
+      const hexValue = colorToHex(swatch.background);
       swatches.appendChild(
         createElementFromHTML(`
           <div class="swatch">
             <div class="swatch-color" style="background:${swatch.background};">
               <span class="swatch-shade" style="color:${swatch.foreground};">${swatch.shade}</span>
             </div>
+            <div class="swatch-name">${tokenName}</div>
+            <div class="swatch-hex">${hexValue}</div>
             <div class="swatch-value">${swatch.value}</div>
           </div>
         `)
@@ -246,7 +263,6 @@ const renderFullPalette = () => {
 
 export default {
   title: 'Foundations/System',
-  tags: ['autodocs'],
 };
 
 export const Overview = {
@@ -265,6 +281,6 @@ export const SpacingAndLayout = {
   render: renderSpacing,
 };
 
-export const ReferencePalettes = {
+export const ColorPalettes = {
   render: renderFullPalette,
 };

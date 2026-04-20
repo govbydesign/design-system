@@ -1,0 +1,11 @@
+.l-sidebar {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: minmax(20rem, 28rem) 1fr;
+}
+
+@media (max-width: 800px) {
+  .l-sidebar {
+    grid-template-columns: 1fr;
+  }
+}

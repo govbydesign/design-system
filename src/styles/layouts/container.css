@@ -1,0 +1,4 @@
+.l-container {
+  inline-size: min(100% - (var(--page-gutter) * 2), var(--container-md));
+  margin-inline: auto;
+}

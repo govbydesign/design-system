@@ -1,0 +1,15 @@
+.u-p-4 {
+  padding: var(--space-4) !important;
+}
+
+.u-p-6 {
+  padding: var(--space-6) !important;
+}
+
+.u-gap-4 {
+  gap: var(--space-4) !important;
+}
+
+.u-gap-6 {
+  gap: var(--space-6) !important;
+}

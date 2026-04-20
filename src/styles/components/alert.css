@@ -1,0 +1,30 @@
+.alert {
+  align-items: start;
+  background: var(--alert-bg, var(--color-surface-accent));
+  border: 1px solid var(--alert-border, var(--color-border-subtle));
+  border-radius: var(--radius-lg);
+  color: var(--color-text-primary);
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+/* TODO: Code review comment from copilot:
+Mixing colors with hardcoded white for alert backgrounds and borders will
+not work correctly in dark mode, as it will produce high-contrast light
+patches in a dark UI. Consider mixing with a theme-aware variable
+like var(--color-surface-page). */
+.alert--success {
+  --alert-bg: color-mix(in oklch, var(--color-success) 14%, white 86%);
+  --alert-border: color-mix(in oklch, var(--color-success) 28%, white 72%);
+}
+
+.alert--warning {
+  --alert-bg: color-mix(in oklch, var(--color-warning) 18%, white 82%);
+  --alert-border: color-mix(in oklch, var(--color-warning) 32%, white 68%);
+}
+
+.alert--error {
+  --alert-bg: color-mix(in oklch, var(--color-error) 14%, white 86%);
+  --alert-border: color-mix(in oklch, var(--color-error) 28%, white 72%);
+}

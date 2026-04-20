@@ -1,5 +1,3 @@
-import './button.css';
-
 export const createButton = ({
   variant = 'primary',
   size = 'medium',
@@ -13,11 +11,10 @@ export const createButton = ({
   btn.addEventListener('click', onClick);
   btn.dataset.variant = variant;
 
-  btn.className = ['storybook-button', `storybook-button--${size}`].join(' ');
+  btn.className = ['button', `button--${size}`].join(' ');
 
   if (backgroundColor) {
-    btn.style.setProperty('--button-custom-background', backgroundColor);
-    btn.dataset.customBackground = 'true';
+    btn.style.setProperty('--button-bg', backgroundColor);
   }
 
   return btn;
